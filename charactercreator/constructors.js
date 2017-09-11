@@ -18,7 +18,7 @@ console.log(obj);
 //*********************************************
 
 // 1) Create a constructor function called BadGuy.
-function BadGuy(name, tagLine){
+let BadGuy = function(name, tagLine){
   this.name = name;
   this.tagline = tagLine;
   // this.sayTagLine = function(){
@@ -39,7 +39,7 @@ let scaryGuy = new BadGuy("Freddy");
 console.log(scaryGuy.name);
 // 5) Give the BadGuy constructor a tagLine method that will take the parameter "tagline" and say the tag line when prompted by a new instance in the following format: console.log("this.name" + " said " + this.tagline); ...
 BadGuy.protoype.sayTagLine = function(){//PROTOTYPE adds to
-  return (this.name + " said " + this.tagline);
+return (this.name + " said " + this.tagline);
 };
 // 6) Make Hans Gruber (the badDude instance say "That's a beautiful suit....I'd hate to ruin it.")
 console.log(badDude.sayTagLine());
